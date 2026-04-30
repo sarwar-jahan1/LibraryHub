@@ -1,24 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLogin = () => {
-    setUser({ name: "Sarwar" });
-  };
+  // 🔥 load user from localStorage
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
 
+  // 🔥 logout
   const handleLogout = () => {
+    localStorage.removeItem("user");
     setUser(null);
   };
 
   return (
     <nav className="bg-white shadow sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        
         {/* 🔷 Logo */}
         <Link href="/" className="text-2xl font-bold text-blue-600">
           LibraryHub
@@ -26,28 +33,38 @@ export default function Navbar() {
 
         {/* 🔷 Desktop Menu */}
         <div className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <Link href="/">Home</Link>
-          <Link href="/books">All Books</Link>
-          <Link href="/profile">My Profile</Link>
+          <Link href="/" className="hover:text-blue-600">
+            Home
+          </Link>
+          <Link href="/books" className="hover:text-blue-600">
+            All Books
+          </Link>
+          <Link href="/profile" className="hover:text-blue-600">
+            My Profile
+          </Link>
         </div>
 
         {/* 🔷 Right */}
         <div className="flex items-center gap-4">
+          
           {/* Auth */}
           {user ? (
-            <>
-              <span className="hidden md:block">{user.name}</span>
+            <div className="flex items-center gap-3">
+              <span className="hidden md:block font-medium text-gray-700">
+                {user.name}
+              </span>
+
               <button
                 onClick={handleLogout}
-                className="bg-red-500 text-white px-3 py-1 rounded"
+                className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
               >
                 Logout
               </button>
-            </>
+            </div>
           ) : (
             <Link
               href="/login"
-              className="bg-blue-600 text-white px-3 py-1 rounded"
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
             >
               Login
             </Link>
