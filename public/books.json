@@ -6,7 +6,7 @@
     "description": "A story about following your dreams.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "https://picsum.photos/200/300?1"
+    "image_url": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg"
   },
   {
     "id": 2,
@@ -15,16 +15,16 @@
     "description": "A guide to writing clean and maintainable code.",
     "category": "Tech",
     "available_quantity": 3,
-    "image_url": "https://picsum.photos/200/300?2"
+    "image_url": "https://m.media-amazon.com/images/I/41xShlnTZTL.jpg"
   },
   {
     "id": 3,
-    "title": "Brief History of Time",
+    "title": "A Brief History of Time",
     "author": "Stephen Hawking",
     "description": "Understanding the universe and time.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://picsum.photos/200/300?3"
+    "image_url": "https://m.media-amazon.com/images/I/81pQPZAFWbL.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "Build good habits and break bad ones.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "https://picsum.photos/200/300?4"
+    "image_url": "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "A fantasy adventure story.",
     "category": "Story",
     "available_quantity": 2,
-    "image_url": "https://picsum.photos/200/300?5"
+    "image_url": "https://m.media-amazon.com/images/I/91b0C2YNSrL.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "History of humankind.",
     "category": "Science",
     "available_quantity": 5,
-    "image_url": "https://picsum.photos/200/300?6"
+    "image_url": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg"
   },
   {
     "id": 7,
@@ -60,16 +60,16 @@
     "description": "Deep dive into JavaScript.",
     "category": "Tech",
     "available_quantity": 4,
-    "image_url": "https://picsum.photos/200/300?7"
+    "image_url": "https://m.media-amazon.com/images/I/81kqrwS1nNL.jpg"
   },
   {
     "id": 8,
-    "title": "Harry Potter",
+    "title": "Harry Potter and the Sorcerer's Stone",
     "author": "J.K. Rowling",
     "description": "A magical story of a young wizard.",
     "category": "Story",
     "available_quantity": 7,
-    "image_url": "https://picsum.photos/200/300?8"
+    "image_url": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Exploring the universe.",
     "category": "Science",
     "available_quantity": 3,
-    "image_url": "https://picsum.photos/200/300?9"
+    "image_url": "https://m.media-amazon.com/images/I/91S6fR1sGEL.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "Focus and productivity techniques.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "https://picsum.photos/200/300?10"
+    "image_url": "https://m.media-amazon.com/images/I/71g2ednj0JL.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "A poetic tale of love and loneliness.",
     "category": "Story",
     "available_quantity": 5,
-    "image_url": "https://picsum.photos/200/300?11"
+    "image_url": "https://m.media-amazon.com/images/I/71E9F1r2qEL.jpg"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "Evolutionary biology explained.",
     "category": "Science",
     "available_quantity": 4,
-    "image_url": "https://picsum.photos/200/300?12"
+    "image_url": "https://m.media-amazon.com/images/I/71XQ7Z5qg-L.jpg"
   }
 ]

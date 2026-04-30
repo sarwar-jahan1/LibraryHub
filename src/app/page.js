@@ -1,12 +1,22 @@
 import Link from "next/link";
+import BookCard from "@/components/book/BookCard";
 
-export default function Home() {
+export default async function Home() {
+  // 🔥 Fetch data from API
+  const res = await fetch("https://library-hub-three.vercel.app/books.json", {
+    cache: "no-store",
+  });
+
+  const books = await res.json();
+
+  // 🔥 Top 4 books
+  const featuredBooks = books.slice(0, 4);
+
   return (
     <div>
       {/* 🔷 Hero Section */}
       <section className="bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
-          {/* 🔷 Left Content */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Find Your Next Read
@@ -19,13 +29,12 @@ export default function Home() {
 
             <Link
               href="/books"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
             >
               Browse Now
             </Link>
           </div>
 
-          {/* 🔷 Right Image */}
           <div className="flex-1">
             <img
               src="https://images.unsplash.com/photo-1512820790803-83ca734da794"
@@ -36,8 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔷 Marquee Section */}
-      {/* 🔷 Marquee Section */}
+      {/* 🔷 Marquee */}
       <div className="bg-blue-600 text-white py-2 marquee-container">
         <p className="marquee-text text-sm font-medium">
           <span className="mr-8">📚 New Arrivals:</span>
@@ -46,9 +54,22 @@ export default function Home() {
           <span className="mr-8">The Alchemist</span>
           <span className="mr-8">Deep Work</span>
           <span className="mr-8">Sapiens</span>
-          <span className="mr-8">Special Discount</span>
+          <span className="mr-8">Special Discount </span>
         </p>
       </div>
+
+      {/* 🔥 Featured Books */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+          Featured Books
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {featuredBooks.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
