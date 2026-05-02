@@ -1,17 +1,17 @@
-import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
+// import { betterAuth } from "better-auth";
+// import { MongoClient } from "mongodb";
+// import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient(process.env.MONGODB_URI); 
-await client.connect();
+// const client = new MongoClient(process.env.MONGODB_URI); 
+// await client.connect();
 
-const db = client.db("libraryhub");
+// const db = client.db("libraryhub");
 
-export const auth = betterAuth({
-  database: mongodbAdapter(db, {
-    client,
-  }),
-  emailAndPassword: {
-    enabled: true,
-  },
-});
+// export const auth = betterAuth({
+//   database: mongodbAdapter(db, {
+//     client,
+//   }),
+//   emailAndPassword: {
+//     enabled: true,
+//   },
+// });
